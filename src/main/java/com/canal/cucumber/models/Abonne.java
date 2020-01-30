@@ -4,6 +4,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +21,9 @@ public class Abonne implements Serializable {
     @Column(name="abonne_id")
     private Long abonneId;
 
+    @NotNull
     private String nom;
+    @NotNull
     private String prenom;
 
     @OneToMany(fetch = FetchType.LAZY , cascade = CascadeType.MERGE)
