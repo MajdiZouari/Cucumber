@@ -10,7 +10,9 @@ import org.springframework.web.server.ResponseStatusException;
 
 import javax.persistence.EntityNotFoundException;
 import java.util.List;
-
+/**
+ * @author m.zouari
+ */
 @RestController
 @RequestMapping("api/v1/abonne")
 public class AbonneController {
@@ -35,8 +37,16 @@ public class AbonneController {
             Abonne abonne = abonneService.getAbonnebyId(id);
             return new ResponseEntity<Abonne>(abonne, HttpStatus.OK);
         } catch (EntityNotFoundException e){
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Abonne type not found");
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Abonne not found");
         }
+    }
+
+    @PutMapping("")
+    public ResponseEntity <Void> update (@RequestBody Abonne abonne, final BindingResult bindingResult){
+        if (bindingResult.hasErrors()) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST,("Abonne not valid "));
+        }
+        return new ResponseEntity(abonneService.update(abonne),HttpStatus.OK);
     }
 
     @GetMapping

@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.time.LocalDate;
 /**
@@ -20,6 +21,7 @@ public class Mouvement implements Serializable {
     @Column(name="mouvement_id")
     private Long mouvementId;
 
+    @NotNull
     private String canal;
     private LocalDate dateEffet;
 }

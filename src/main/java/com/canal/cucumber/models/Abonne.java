@@ -26,11 +26,11 @@ public class Abonne implements Serializable {
     @NotNull
     private String prenom;
 
-    @OneToMany(fetch = FetchType.LAZY , cascade = CascadeType.MERGE)
+    @OneToMany(fetch = FetchType.LAZY , cascade = CascadeType.ALL)
     @JoinColumn(name = "abonne_id")
     private List<Adresse> adresses = new ArrayList<>();
 
-    @OneToMany(fetch = FetchType.LAZY , cascade = CascadeType.MERGE)
+    @OneToMany(fetch = FetchType.LAZY , cascade = CascadeType.ALL)
     @JoinColumn(name = "abonne_id")
     private List<Contrat> contrats = new ArrayList<>();
 }

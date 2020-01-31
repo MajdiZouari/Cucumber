@@ -26,7 +26,7 @@ public class Adresse implements Serializable {
     private boolean active;
     private boolean principale;
 
-    @OneToMany(fetch = FetchType.LAZY , cascade = CascadeType.MERGE)
+    @OneToMany(fetch = FetchType.LAZY , cascade = CascadeType.ALL)
     @JoinColumn(name = "adresse_id")
     private List<Mouvement> mouvements = new ArrayList<>();
 }

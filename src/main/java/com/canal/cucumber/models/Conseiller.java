@@ -25,7 +25,7 @@ public class Conseiller implements Serializable {
     private String nom;
     private String prenom;
 
-    @OneToMany(fetch = FetchType.LAZY , cascade = CascadeType.MERGE)
+    @OneToMany(fetch = FetchType.LAZY , cascade = CascadeType.ALL)
     @JoinColumn(name = "conseiller_id")
     private List<Mouvement> mouvements = new ArrayList<>();
 }

@@ -3,11 +3,15 @@ package com.canal.cucumber.services;
 import com.canal.cucumber.models.Abonne;
 import com.canal.cucumber.repositories.AbonneRepository;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityNotFoundException;
 import java.util.List;
-
+/**
+ * @author m.zouari
+ */
 @Service
+@Transactional(rollbackFor = Throwable.class)
 public class AbonneService {
 
     private final AbonneRepository abonneRepository;
@@ -17,6 +21,10 @@ public class AbonneService {
     }
 
     public Abonne create (Abonne abonne){
+        return abonneRepository.save(abonne);
+    }
+
+    public Abonne update (Abonne abonne){
         return abonneRepository.save(abonne);
     }
 
