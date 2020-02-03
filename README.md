@@ -1,7 +1,6 @@
 # Cucumber
 BDD scenario with cucumber
 
-
 Ce projet contient une API Rest avec des tests cucumber.
 
 Une base de données Postgresql a été utilisée pour le stockage des données.
@@ -16,6 +15,16 @@ L'application est réparties sur differentes couches :
 - Repositories
 - Services
 - Models
+
+## Frameworks utilisés
+
+- Springboot
+- JPA
+- Lombok
+- Cucumber
+- TestNg
+- Serenity
+- Mockito
 
 ## Installation
 
