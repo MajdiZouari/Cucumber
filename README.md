@@ -16,3 +16,17 @@ L'application est réparties sur differentes couches :
 - Repositories
 - Services
 - Models
+
+## Installation
+
+Lancez un terminal git et exécutez la commande suivante :
+git clone https://github.com/MajdiZouari/Cucumber.git
+
+Ensuite, installez le projet avec la commande :
+mvn clean install
+
+Pour lancer les tests, il suffit d'exécuter la commande :
+mvn test
+
+Les rapports Serenity sont publiés dans le dossier :
+/target/site/serenity/index.html
