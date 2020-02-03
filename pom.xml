@@ -115,7 +115,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 			<!--  serenity-maven-plugin to have reports aggregated from test results -->
-			<!-- reports generated at /target/site/serenity/index.html -->
+			<!--  reports generated at /target/site/serenity/index.html -->
 			<plugin>
 				<groupId>net.serenity-bdd.maven.plugins</groupId>
 				<artifactId>serenity-maven-plugin</artifactId>

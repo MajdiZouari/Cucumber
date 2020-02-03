@@ -52,7 +52,6 @@ public class StepsDef extends SpringBootBaseIntegrationTest{
         Assert.assertEquals(savedAbonne.getAdresses(),abonne.getAdresses());
         Assert.assertEquals(savedAbonne.getNom(), abonne.getNom());
         Assert.assertEquals(savedAbonne.getPrenom(), abonne.getPrenom());
-
     }
 
     @When("^le conseiller connecte a FACE modifie l'adresse de l'abonne sans date d’effet$")
