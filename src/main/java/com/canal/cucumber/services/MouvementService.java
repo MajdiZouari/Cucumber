@@ -4,7 +4,6 @@ import com.canal.cucumber.models.Mouvement;
 import com.canal.cucumber.repositories.MouvementRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
 /**
  * @author m.zouari
  */
@@ -19,6 +18,10 @@ public class MouvementService {
     }
 
     public Mouvement create (Mouvement mouvement){
+        return mouvementRepository.save(mouvement);
+    }
+
+    public Mouvement update (Mouvement mouvement){
         return mouvementRepository.save(mouvement);
     }
 }
