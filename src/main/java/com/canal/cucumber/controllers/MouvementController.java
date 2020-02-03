@@ -1,6 +1,5 @@
 package com.canal.cucumber.controllers;
 
-import com.canal.cucumber.models.Abonne;
 import com.canal.cucumber.models.Mouvement;
 import com.canal.cucumber.services.MouvementService;
 import org.springframework.http.HttpStatus;
